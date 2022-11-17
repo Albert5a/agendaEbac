@@ -3,8 +3,8 @@ const imgYes = '<img src="./images/yes.png" alt="yes" />';
 const imgNo = '<img src="./images/no.png" alt="no" />';
 const contatos = [];
 const numeros = [];
-const spanSalvo = '<span class="numero salvo">Sucesso</span>';
-const spanErro = '<span class="numero erro">Error</span>';
+const spanSalvo = '<span class="numero salvo">Sim</span>';
+const spanErro = '<span class="numero erro">Não</span>';
 
 let linhas = '';
 let contatosError = 0;
@@ -24,7 +24,7 @@ function adicionaLinha() {
     const inputNumeroContato = document.getElementById('numero-contato');
 
     if (contatos.includes(inputNomeContato.value) || numeros.includes(inputNumeroContato.value)) {
-        alert(`O contato: ${inputNomeContato.value}: ${inputNumeroContato.value} já foi inserido.`)
+        alert(`O contato: ${inputNomeContato.value} ou número: ${inputNumeroContato.value} já foi inserido.`)
     } else {
         if (inputNumeroContato.value.length > 9 && inputNumeroContato.value.length < 12) {
             contatos.push(inputNomeContato.value);
@@ -51,7 +51,7 @@ function adicionaLinha() {
 
 function atualizaTabela() {
     const corpoTabela = document.querySelector('tbody');
-    corpoTabela.innerHTML = linhas;
+    corpoTabela.innerHTML = linhas; 
 };
 
 function errosESalvos() {
