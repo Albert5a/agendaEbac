@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de contatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./images/contacts.png" alt="Agenda">
+            <h1>Agenda de contatos</h1>
+        </header>
+        <form id="form-contato">
+            <input id="nome-contato" type="text" required placeholder="Nome" />
+            <input id="numero-contato" type="number" required placeholder="(00) ?0000-0000" />
+            <button type="submit">Adicionar</button>
+        </form>
+        <p class="alert"></p>
+        <table cellspacing="0"> <!-- cellspacing para remover o separador padrão da tabela --> 
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Número</th>
+                    <th>Salvo?</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td id="numeros-salvos">_</td>
+                    <td id="numeros-error">_</td>
+                    <td id="todos-salvos">_</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
